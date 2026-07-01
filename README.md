@@ -2,9 +2,14 @@
 
 This project is an industrial-inspired embedded systems application that enables **real-time bidirectional (Full-Duplex) UART** communication between an **STM32F407** microcontroller and a desktop Graphical User Interface (GUI) developed using **Qt 6 (C++)**.
 
+<p align="center">
+  <img src="images/qt.png" alt="Qt Interface" width="400"/>
+</p>
+
 The system features two main functionalities:
 1. **Telemetry (Data Acquisition & Transmission):** 12-bit ADC values read from a potentiometer connected to the STM32's `PA0` pin are packaged and transmitted to the PC every 200 ms. The Qt GUI visualizes this incoming real-time telemetry data using a progress bar (`QProgressBar`).
 2. **Control (Command Reception):** Commands sent from the Qt GUI trigger UART interrupts on the STM32, dynamically controlling the built-in LED connected to pin `PD12`.
+
 
 ## 👨‍💻 Author
 
